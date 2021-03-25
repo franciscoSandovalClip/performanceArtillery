@@ -1,0 +1,38 @@
+config:
+  target: "https://api.todoist.com"
+  phases:
+    - duration: 6
+      arrivalRate: 1
+      name: "Phase 1"
+  defaults:
+    headers:
+      Authorization: Bearer {{ $processEnvironment.TOKEN }}
+      Content-Type: application/json
+  processor: "./scripts/myProcessor.js"
+scenarios:
+  - flow:
+      - function: "generateRandomData"
+      - get:
+          url: "/rest/v1/tasks"
+      - post:
+          url: "/rest/v1/tasks"
+          json:
+            content: "{{taskSummary}}"
+          capture:
+            json: "$.id"
+            as: "taskId"
+      - get:
+          url: "/rest/v1/tasks/{{taskId}}"
+      - post:
+          url: "/rest/v1/tasks/{{taskId}}"
+          json:
+            content: "{{taskSummary}}"
+      - post:
+          url: "/rest/v1/tasks/{{taskId}}/close"
+      - post:
+          url: "/rest/v1/tasks/{{taskId}}/reopen"
+      # - delete:
+      #     url: "/rest/v1/tasks/{{taskId}}"
+      - log: "Current id is {{ taskId }}"
+  # For more information: https://artillery.io/docs/script-reference/
+# For more information: https://artillery.io/docs/script-reference/
