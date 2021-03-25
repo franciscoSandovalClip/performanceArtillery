@@ -1,0 +1,123 @@
+{
+  "aggregate": {
+    "timestamp": "2021-03-24T23:51:06.301Z",
+    "scenariosCreated": 6,
+    "scenariosCompleted": 6,
+    "requestsCompleted": 36,
+    "latency": {
+      "min": 185.4,
+      "max": 919.3,
+      "median": 365.6,
+      "p95": 847.3,
+      "p99": 919.3
+    },
+    "rps": {
+      "count": 36,
+      "mean": 4.81
+    },
+    "scenarioDuration": {
+      "min": 2062.8,
+      "max": 2779.6,
+      "median": 2487.8,
+      "p95": 2779.6,
+      "p99": 2779.6
+    },
+    "scenarioCounts": {
+      "0": 6
+    },
+    "errors": {},
+    "codes": {
+      "200": 18,
+      "204": 18
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 6,
+        "arrivalRate": 1,
+        "name": "Phase 1"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-03-24T23:51:06.300Z",
+      "scenariosCreated": 6,
+      "scenariosCompleted": 6,
+      "requestsCompleted": 36,
+      "latency": {
+        "min": 185.4,
+        "max": 919.3,
+        "median": 365.6,
+        "p95": 847.3,
+        "p99": 919.3
+      },
+      "rps": {
+        "count": 36,
+        "mean": 4.81
+      },
+      "scenarioDuration": {
+        "min": 2062.8,
+        "max": 2779.6,
+        "median": 2487.8,
+        "p95": 2779.6,
+        "p99": 2779.6
+      },
+      "scenarioCounts": {
+        "0": 6
+      },
+      "errors": {},
+      "codes": {
+        "200": 18,
+        "204": 18
+      },
+      "matches": 0,
+      "latencies": [
+        330115527,
+        382767934,
+        215191044,
+        254753914,
+        323762490,
+        309855709,
+        216580974,
+        560208384,
+        359204261,
+        254592310,
+        674988379,
+        436788650,
+        498971530,
+        185366370,
+        226509848,
+        413968984,
+        919348976,
+        443090083,
+        185655360,
+        632905901,
+        309955073,
+        229988252,
+        394595559,
+        758823712,
+        885223791,
+        195129665,
+        228705120,
+        369909803,
+        534918459,
+        713794511,
+        186081404,
+        355221788,
+        478172281,
+        374520447,
+        361235276,
+        425517078
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}
